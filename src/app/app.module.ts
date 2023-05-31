@@ -7,7 +7,8 @@ import { HeroeModule } from './heroes/hero.module';
 
 @NgModule({
   declarations: [
-    AppComponent  ],
+    AppComponent
+  ],
   imports: [
     BrowserModule,
     CounterModule,
