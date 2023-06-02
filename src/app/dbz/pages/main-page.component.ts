@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Character } from '../interfaces/Character';
+import { Character } from '../interfaces/character';
+
 
 @Component({
   selector: 'app-dbz-main-page',
@@ -16,10 +17,18 @@ export class MainPageComponent implements OnInit {
     {
       name: 'Goku',
       power: 2000
+    },
+    {
+      name: 'Bulma',
+      power: 10
     }
   ];
 
   constructor() { }
 
   ngOnInit() { }
+
+  addCharacter(character: Character):void {
+    this.characters.push(character);
+  }
 }

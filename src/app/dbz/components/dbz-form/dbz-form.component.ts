@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Character } from '../../interfaces/character';
 
 @Component({
   selector: 'app-dbz-form',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class DbzFormComponent {
 
+  @Output()
+  public newCharacter: EventEmitter<Character> = new EventEmitter();
+
+  public character: Character = {
+    name: '',
+    power: 0
+  };
+
+  showCharacter() {
+    this.newCharacter.emit( this.character );
+    this.character = { name: '', power: 0};
+    document.getElementById('name')?.focus();
+  }
 }

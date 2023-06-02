@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Character } from '../../interfaces/Character';
+import { Character } from '../../interfaces/character';
 
 @Component({
   selector: 'app-dbz-list',
