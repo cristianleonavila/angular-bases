@@ -1,17 +1,17 @@
 <h4>Listado</h4>
 <ul class="list-group">
-  <li class="list-group-item"
-      *ngFor="let character of characterList;
+    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let character of characterList;
       let idx = index;
       let isFirst = first;
       let isLast = last;
       let isEven = even;
-      let isOdd = odd;"
-      [ngClass]="{
+      let isOdd = odd;" [ngClass]="{
         'list-group-item-dark': isEven,
         'list-group-item-light': isOdd
       }">
-
-      <span> {{ idx + 1}}.</span> {{ character.name }} - {{ character.power }}
-  </li>
+        <div>
+            <span> {{ idx + 1}}.</span> {{ character.name }} - {{ character.power }}
+        </div>
+        <button class="btn btn-danger" (click)="deleteCharacter(idx)">X</button>
+    </li>
 </ul>

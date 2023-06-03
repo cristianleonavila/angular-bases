@@ -31,4 +31,8 @@ export class MainPageComponent implements OnInit {
   addCharacter(character: Character):void {
     this.characters.push(character);
   }
+
+  deleteCharacter(idx:number):void {
+    this.characters.splice(idx, 1);
+  }
 }
