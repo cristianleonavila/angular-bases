@@ -12,6 +12,6 @@
         <div>
             <span> {{ idx + 1}}.</span> {{ character.name }} - {{ character.power }}
         </div>
-        <button class="btn btn-danger" (click)="deleteCharacter(idx)">X</button>
+        <button class="btn btn-danger" (click)="deleteCharacter(character.id)">X</button>
     </li>
 </ul>

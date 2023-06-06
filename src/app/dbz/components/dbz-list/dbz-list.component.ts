@@ -9,7 +9,7 @@ import { Character } from '../../interfaces/character';
 export class DbzListComponent {
 
   @Output()
-  deletedId:EventEmitter<number> = new EventEmitter();
+  deletedId:EventEmitter<string> = new EventEmitter();
 
   @Input()
   public characterList:Character[] = [
@@ -19,7 +19,8 @@ export class DbzListComponent {
     }
   ];
 
-  deleteCharacter(idx:number):void {
-    this.deletedId.emit(idx);
+  deleteCharacter(id?:string):void {
+    if ( !id ) return;
+    this.deletedId.emit(id);
   }
 }
